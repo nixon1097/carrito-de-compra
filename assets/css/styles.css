@@ -419,7 +419,7 @@ body.dark .product__btn:hover{
 .product__stock{
     grid-column: span 2;
     justify-self: flex-end;
-    font-size: var(--small-font);
+    font-size: var(--normal-font);
 }
 .product__title{
     grid-column: span 3;
@@ -584,7 +584,7 @@ body.dark .cart__footer{
     grid-template-rows: 1fr 30px;
 
 }
-body.dark .article__title, .article__quantity-btn, article__btn, .remove-from-cart, .article span{
+body.dark .article__title, .article__quantity-btn, .article__btn, .remove-from-cart, .article span{
     color: var(--big-color)!important;
 }
 .article__title{

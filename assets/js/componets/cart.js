@@ -52,19 +52,33 @@ function cart (db,printProducts){
 
 
     }
-    function addToCart (id, qty=1){
-        const itemFinded = cart.find(i=>i.id === id)
 
-        if(itemFinded){
-            
-            itemFinded.qty = itemFinded.qty + qty
-        }else{
-            
-        
-            cart.push({id,qty})
-        }
-        printCart()
-    }
+
+ function addToCart(id, qty = 1) {
+      const itemFinded = cart.find(i => i.id === id)
+      const dbFinded = db.find(db => db.id == id)
+
+
+      if (itemFinded) {
+
+          itemFinded.qty = itemFinded.qty + qty
+
+          if (dbFinded.quantity <= itemFinded.qty) {
+              return alert("No tenbemso mas tock")
+          }
+
+      } else {
+
+
+          cart.push({ id, qty })
+      }
+
+
+      
+
+      console.log(cart)
+      printCart()
+  }
   
     function removeFromCart(id, qty = 1){
         const itemFinded = cart.find(i=>i.id === id)
