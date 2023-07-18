@@ -447,6 +447,7 @@ body.dark .footer{
 .footer__social{
     display: flex;
     align-items: center;
+    justify-content: center;
     gap: var(--sp-1-5);
 }
 
@@ -585,7 +586,7 @@ body.dark .cart__footer{
 
 }
 body.dark .article__title, .article__quantity-btn, .article__btn, .remove-from-cart, .article span{
-    color: var(--big-color)!important;
+    color: var(--big-color);
 }
 .article__title{
     grid-column: span 4;

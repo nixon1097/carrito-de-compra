@@ -61,15 +61,15 @@ function cart (db,printProducts){
 
       if (itemFinded) {
 
-          itemFinded.qty = itemFinded.qty + qty
+          itemFinded.qty += qty
 
-          if (dbFinded.quantity <= itemFinded.qty) {
-              return alert("No tenbemso mas tock")
+          if (dbFinded.quantity === itemFinded.qty) {
+              return alert("No tenemos mas tock")
           }
 
       } else {
 
-
+ 
           cart.push({ id, qty })
       }
 
